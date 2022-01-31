@@ -15,7 +15,7 @@ mongoose
     `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.xlqso.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
   )
   .then(() => {
-    app.listen(3000, () => {
+    app.listen(process.env.PORT || 3000, () => {
       console.log('🚀 server is running on http://localhost:3000');
     });
   })
